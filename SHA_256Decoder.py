@@ -1,13 +1,13 @@
-from os import read, write
 import hashlib
 
+
 class SHA256Decoder(object):
-    def sha256(self):
-        password = input("Ââåäèòå ïàðîëü: ")
+    def decodeSha256(password):
         hashed_password = hashlib.sha256(password.encode()).hexdigest()
-        print("Õýø ïàðîëÿ:"+hashed_password)
+        return hashed_password;
 
-
-x=SHA256Decoder()
-x.sha256()
+decoder=SHA256Decoder
+password = input("Enter password: ")
+hashed_password = decoder.decodeSha256(password) 
+print(f"Hashed password: {hashed_password}")
 
