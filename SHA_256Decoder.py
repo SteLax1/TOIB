@@ -7,7 +7,11 @@ class SHA256Decoder(object):
         return hashed_password;
 
 decoder=SHA256Decoder
-password = input("Enter password: ")
-hashed_password = decoder.decodeSha256(password) 
-print(f"Hashed password: {hashed_password}")
+print("To end the program enter exit\n")
+while True: 
+    password = input("Enter password: ")
+    if password == "exit":
+        break
+    hashed_password = decoder.decodeSha256(password) 
+    print(f"Hashed password: {hashed_password}\n")
 
